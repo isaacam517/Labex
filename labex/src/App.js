@@ -11,6 +11,9 @@ import TripsListPage from './pages/TripsListPage';
 import TripDetailPage from './pages/TripDetailPage';
 import LoginPage from './pages/LoginPage';
 import styled from 'styled-components' 
+import { CssBaseline } from '@material-ui/core';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
 
 const AppContainer = styled.div`
   display: flex;
@@ -22,6 +25,8 @@ const AppContainer = styled.div`
 const App = () => {
   return (
     <Router>
+      <MuiPickersUtilsProvider utils={MomentUtils}>      
+      <CssBaseline/>
       <AppContainer>
         <Switch>
         <Route path="/login">
@@ -44,6 +49,7 @@ const App = () => {
           </Route>
         </Switch>         
       </AppContainer>
+      </MuiPickersUtilsProvider>
     </Router>
   );
 }
