@@ -1,12 +1,12 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import { ButtonsContainer } from './styles';
 import { Link } from 'react-router-dom';
+import PageTitle from '../../components/PageTitle';
 
 const HomePage = () => {
     return <div>
-        <Typography variant="h1" align={'center'} gutterBottom >LabeX</Typography>
+        <PageTitle title={'LabeX'} />
             <ButtonsContainer>
                 <Link to={'/login'}>
                     <Button variant={'contained'} color={'secondary'} >Área do Administrador</Button>
